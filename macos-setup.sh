@@ -284,12 +284,14 @@ main () {	# See https://stackoverflow.com/questions/13588457/forward-function-de
 		imagecapture)	# Image Capture.app
 			;;
 		iterm)			# iTerm.app
+			move_directory_entry "D" "$SOURCE/.iterm2" "/Users/steve/.iterm2"
+			move_directory_entry "F" "$SOURCE/.iterm2_shell_integration.bash" "/Users/steve/.iterm2_shell_integration.bash"
 			move_directory_entry "D" "$SOURCE/Library/Application Support/iTerm" "/Users/steve/Library/Application Support/iTerm"
 			move_directory_entry "D" "$SOURCE/Library/Application Support/iTerm2" "/Users/steve/Library/Application Support/iTerm2"
 			move_directory_entry "F" "$SOURCE/Library/Preferences/com.googlecode.iterm2.plist" "/Users/steve/Library/Preferences/com.googlecode.iterm2.plist"
 			;;
 		itunes)			# iTunes.app
-			move_directory_entry "D" "$SOURCE/Library/iTunes" "/Users/steve/Library/iTunes"		# This is the directory that contains the symbolic link `Scripts` pointing  to /Users/steve/Dropbox/iTunes/Scripts
+			move_directory_entry "D" "$SOURCE/Library/iTunes" "/Users/steve/Library/iTunes"	
 			move_directory_entry "F" "$SOURCE/Library/Preferences/com.apple.iPod.plist" "/Users/steve/Library/Preferences/com.apple.iPod.plist"
 			move_directory_entry "F" "$SOURCE/Library/Preferences/com.apple.iTunes.eq.plist" "/Users/steve/Library/Preferences/com.apple.iTunes.eq.plist"
 			move_directory_entry "F" "$SOURCE/Library/Preferences/com.apple.iTunes.Gracenote.plist" "/Users/steve/Library/Preferences/com.apple.iTunes.Gracenote.plist"
@@ -511,7 +513,7 @@ main () {	# See https://stackoverflow.com/questions/13588457/forward-function-de
 		# * * * * MISCELLANEOUS * * * *
 		bash)
 			create_symbolic_link "/Users/steve/Dropbox/.bash_history_shared" "/Users/steve/.bash_history"
-			move_directory_entry "F" "$SOURCE/.bash_profile" "/Users/steve/.bash_profile"
+			create_symbolic_link "/Users/steve/Dropbox/.bash_profile_shared" "/Users/steve/.bash_profile"
 			move_directory_entry "F" "$SOURCE/.hushlogin" "/Users/steve/.hushlogin"
 			;;
 		fonts)
@@ -550,7 +552,7 @@ main () {	# See https://stackoverflow.com/questions/13588457/forward-function-de
 			launchctl load /Users/steve/Library/LaunchAgents/com.steve.Outlook.close.plist
 			;;
 		scripts)
-			create_symbolic_link "/Users/steve/Dropbox/Scripts" "/Users/steve/Library/Scripts"
+			create_symbolic_link "/Users/steve/Library/Mobile Documents/com~apple~CloudDocs/Scripts" "/Users/steve/Library/Scripts"
 			;;
 		services)
 			move_directory_entry "D" "$SOURCE/Library/Services" "/Users/steve/Library/Services"
