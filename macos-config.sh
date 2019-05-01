@@ -1095,6 +1095,17 @@ fi
 
 
 
+# # # # # # # # # # # # # # # # # # # # # # # # # #
+# # ITUNES
+# #
+
+# iTunes > Preferences > Devices > Prevent iPods, iPhones and iPads from syncing automatically
+	# yes
+	defaults write com.apple.itunes dontAutomaticallySyncIPods -bool true
+	
+	# no
+	#defaults write com.apple.itunes dontAutomaticallySyncIPods -bool false
+
 
 # # # # # # # # # # # # # # # # # # # # # # # # # #
 # # HIDDEN
@@ -1449,7 +1460,7 @@ fi
 
 
 # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # USER #picture
+# # USER photo
 # #
 
 # Change the user's (steve) photo
