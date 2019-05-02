@@ -333,7 +333,7 @@ main () {	# See https://stackoverflow.com/questions/13588457/forward-function-de
 		malwarebytes)	# Malwarebytes.app
 			;;
 		mamp)			# MAMP
-			move_directory_entry "D" "$SOURCE/Applications/MAMP" "/Applications/MAMP"
+			#move_directory_entry "D" "$SOURCE/Applications/MAMP" "/Applications/MAMP"
 			move_directory_entry "F" "$SOURCE/Library/Preferences/de.appsolute.MAMP.plist" "/Users/steve/Library/Preferences/de.appsolute.MAMP.plist"
 			;;
 		maps)			# Maps.app
