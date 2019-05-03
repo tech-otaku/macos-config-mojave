@@ -41,7 +41,7 @@ main () {	# See https://stackoverflow.com/questions/13588457/forward-function-de
 
 	LOG=-macos-setup-`scutil --get HostName | awk '{print tolower($1)}'`.log
 	
-	if [ $APP != "pictures" && $APP != "mail" ]; then
+	#if [ $APP != "pictures" && $APP != "mail" ]; then
 
 	d="$SOURCE"/Library
 	echo "Checking the folder $d exists"
@@ -99,7 +99,7 @@ main () {	# See https://stackoverflow.com/questions/13588457/forward-function-de
 	unset SRC
 	unset TRG
 	
-	fi
+	#fi
 
 	#echo "$SOURCE"
 
