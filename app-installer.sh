@@ -70,6 +70,12 @@ case "$1" in
 		[ -d /Applications/iTerm.app ] && rm -rf /Applications/iTerm.app
 		mv ~/Downloads/iTerm.app /Applications
 		;;
+	littlesnitch)
+		[ -f ~/Downloads/LittleSnitch-4.3.1.dmg ] && rm ~/Downloads/LittleSnitch-4.3.1.dmg
+		curl -o ~/Downloads/LittleSnitch-4.3.1.dmg -L https://www.obdev.at/downloads/littlesnitch/LittleSnitch-4.3.1.dmg
+		hdiutil attach ~/Downloads/LittleSnitch-4.3.1.dmg
+		open /Volumes/Little\ Snitch\ 4.3.1
+		;;
 	*)
 		;;
 esac
