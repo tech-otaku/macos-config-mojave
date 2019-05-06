@@ -41,65 +41,65 @@ main () {	# See https://stackoverflow.com/questions/13588457/forward-function-de
 
 	LOG=-macos-setup-`scutil --get HostName | awk '{print tolower($1)}'`.log
 	
-	#if [ $APP != "pictures" && $APP != "mail" ]; then
+	if [[ $APP != "pictures" ]] && [[ $APP != "mail" ]]; then
 
-	d="$SOURCE"/Library
-	echo "Checking the folder $d exists"
-	if [ -d "$d" ]; then
-		echo "$d ---> OK."
-		else
-		echo "ERROR: $d not found. Please re-run this script entering the correct source path."
-		return
-	fi
-
-	SRC="$SOURCE"/Dropbox
-	TRG=/Users/steve/Dropbox
-	echo "Checking the folder $TRG exists"
-	if [ -d "$TRG" ]; then
-		echo "$TRG ---> OK."
-	else
-		if [ -d "$SRC" ]; then
-			read -p "ERROR: $TRG not found. Do you want to move $SRC to /Users/steve (Y/n)? " COPY
-			if [[ $COPY =~ [A-Z] && $COPY == "Y" ]]; then
-				move_directory_entry "D" "$SRC" "$TRG"
+		d="$SOURCE"/Library
+		echo "Checking the folder $d exists"
+		if [ -d "$d" ]; then
+			echo "$d ---> OK."
 			else
-				echo "ERROR: $TRG is required. Exiting..."
-				return
-			fi
-		else
-			echo "ERROR: Neither $SRC nor $TRG exist. Exiting..."
+			echo "ERROR: $d not found. Please re-run this script entering the correct source path."
 			return
 		fi
-	fi
 
-	unset SRC
-	unset TRG
-
-
-	SRC="$SOURCE"/Sundry
-	TRG=/Users/steve/Sundry
-	echo "Checking the folder $TRG exists"
-	if [ -d "$TRG" ]; then
-		echo "$TRG ---> OK."
-	else
-		if [ -d "$SRC" ]; then
-			read -p "ERROR: $TRG not found. Do you want to move $SRC to /Users/steve (Y/n)? " COPY
-			if [[ $COPY =~ [A-Z] && $COPY == "Y" ]]; then
-				move_directory_entry "D" "$SRC" "$TRG"
+		SRC="$SOURCE"/Dropbox
+		TRG=/Users/steve/Dropbox
+		echo "Checking the folder $TRG exists"
+		if [ -d "$TRG" ]; then
+			echo "$TRG ---> OK."
+		else
+			if [ -d "$SRC" ]; then
+				read -p "ERROR: $TRG not found. Do you want to move $SRC to /Users/steve (Y/n)? " COPY
+				if [[ $COPY =~ [A-Z] && $COPY == "Y" ]]; then
+					move_directory_entry "D" "$SRC" "$TRG"
+				else
+					echo "ERROR: $TRG is required. Exiting..."
+					return
+				fi
 			else
-				echo "ERROR: $TRG is required. Exiting..."
+				echo "ERROR: Neither $SRC nor $TRG exist. Exiting..."
 				return
 			fi
-		else
-			echo "ERROR: Neither $SRC nor $TRG exist. Exiting..."
-			return
 		fi
-	fi
 
-	unset SRC
-	unset TRG
+		unset SRC
+		unset TRG
+
+
+		SRC="$SOURCE"/Sundry
+		TRG=/Users/steve/Sundry
+		echo "Checking the folder $TRG exists"
+		if [ -d "$TRG" ]; then
+			echo "$TRG ---> OK."
+		else
+			if [ -d "$SRC" ]; then
+				read -p "ERROR: $TRG not found. Do you want to move $SRC to /Users/steve (Y/n)? " COPY
+				if [[ $COPY =~ [A-Z] && $COPY == "Y" ]]; then
+					move_directory_entry "D" "$SRC" "$TRG"
+				else
+					echo "ERROR: $TRG is required. Exiting..."
+					return
+				fi
+			else
+				echo "ERROR: Neither $SRC nor $TRG exist. Exiting..."
+				return
+			fi
+		fi
+
+		unset SRC
+		unset TRG
 	
-	#fi
+	fi
 
 	#echo "$SOURCE"
 
