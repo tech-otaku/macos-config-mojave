@@ -5,7 +5,7 @@ case "$1" in
 		[ -f ~/Downloads/AdGuardInstaller.dmg ] && rm ~/Downloads/AdGuardInstaller.dmg
 		curl -o ~/Downloads/AdGuardInstaller.dmg https://download.adguard.com/d/2/AdGuardInstaller.dmg
 		hdiutil attach ~/Downloads/AdGuardInstaller.dmg
-		open /Volumes/AdGuard\ Installer
+		#open /Volumes/AdGuard\ Installer
 		open /Volumes/AdGuard\ Installer/AdGuard.app
 		;;
 	atom)
@@ -29,13 +29,15 @@ case "$1" in
 		[ -f ~/Downloads/CS4_Download.dmg ] && rm ~/Downloads/CS4_Download.dmg
 		curl -o ~/Downloads/CS4_Download.dmg -L https://downloads.econtechnologies.com/CS4_Download.dmg
 		hdiutil attach ~/Downloads/CS4_Download.dmg
-		open /Volumes/ChronoSync
+		#open /Volumes/ChronoSync
+		open /Volumes/ChronoSync/Install.pkg
 		;;
 	dropbox)
 		[ -f ~/Downloads/DropboxInstaller.dmg ] && rm ~/Downloads/DropboxInstaller.dmg
 		curl -o ~/Downloads/DropboxInstaller.dmg -L https://www.dropbox.com/download?plat=mac
 		hdiutil attach ~/Downloads/DropboxInstaller.dmg
-		open /Volumes/Dropbox\ Installer
+		#open /Volumes/Dropbox\ Installer
+		open /Volumes/Dropbox\ Installer/Dropbox.app
 		;;
 	evernote)
 		[ -f ~/Downloads/Evernote_RELEASE_7.10_457732.dmg ] && rm ~/Downloads/Evernote_RELEASE_7.10_457732.dmg
@@ -75,7 +77,8 @@ case "$1" in
 		[ -f ~/Downloads/LittleSnitch-4.3.1.dmg ] && rm ~/Downloads/LittleSnitch-4.3.1.dmg
 		curl -o ~/Downloads/LittleSnitch-4.3.1.dmg -L https://www.obdev.at/downloads/littlesnitch/LittleSnitch-4.3.1.dmg
 		hdiutil attach ~/Downloads/LittleSnitch-4.3.1.dmg
-		open /Volumes/Little\ Snitch\ 4.3.1
+		#open /Volumes/Little\ Snitch\ 4.3.1
+		open /Volumes/Little\ Snitch\ 4.3.1/Little\ Snitch\ Installer.app
 		;;
 	*)
 		;;
