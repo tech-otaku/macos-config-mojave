@@ -81,6 +81,8 @@ case "$1" in
 		open /Volumes/Little\ Snitch\ 4.3.1/Little\ Snitch\ Installer.app
 		;;
 	*)
+		echo "ERROR: Application '$1' invalid."
+		exit 1
 		;;
 esac
 
