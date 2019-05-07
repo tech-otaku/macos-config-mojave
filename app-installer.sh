@@ -6,6 +6,7 @@ case "$1" in
 		curl -o ~/Downloads/AdGuardInstaller.dmg https://download.adguard.com/d/2/AdGuardInstaller.dmg
 		hdiutil attach ~/Downloads/AdGuardInstaller.dmg
 		open /Volumes/AdGuard\ Installer
+		open /Volumes/AdGuard\ Installer/AdGuard.app
 		;;
 	atom)
 		[ -f ~/Downloads/atom-mac.zip ] && rm ~/Downloads/atom-mac.zip
