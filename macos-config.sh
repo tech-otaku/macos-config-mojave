@@ -1175,7 +1175,7 @@ fi
 
 # SCREENSHOTS
 
-    # Save screenshots to /Users/steve/Box Sync/Screen Captures. OK if this location doesn't exist yet.
+    # Save screenshots to /Users/steve/iCloud Drive/Screen Captures. OK if this location doesn't exist yet.
         defaults write com.apple.screencapture location -string "${HOME}/Library/Mobile Documents/com~apple~CloudDocs/Screen Captures"
 
 
