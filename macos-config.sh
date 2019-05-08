@@ -1481,6 +1481,19 @@ fi
     	"SystemUIServer"; do
     	killall "${app}"  > /dev/null 2>&1
     done
+    
+    
+# Link to Evernote URL  
+tee ~/Desktop/evernote.webloc EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>URL</key>
+	<string>http://bit.ly/2vvBcpY</string>
+</dict>
+</plist>
+EOF
 
 
 # Execute the AppleScript configuration script
