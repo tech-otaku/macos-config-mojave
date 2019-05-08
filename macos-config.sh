@@ -1483,7 +1483,7 @@ fi
     done
     
     
-# Link to Evernote URL  
+# Desktop link to Evernote URL  
 tee ~/Desktop/evernote.webloc > /dev/null 2>&1 <<EOF 
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -1494,6 +1494,14 @@ tee ~/Desktop/evernote.webloc > /dev/null 2>&1 <<EOF
 </dict>
 </plist>
 EOF
+
+/usr/libexec/PlistBuddy /Users/steve/Library/Safari/Bookmarks.plist -c "Add :Children:1:Children:0 dict"
+/usr/libexec/PlistBuddy /Users/steve/Library/Safari/Bookmarks.plist -c "Add :Children:1:Children:0:URIDictionary dict"
+/usr/libexec/PlistBuddy /Users/steve/Library/Safari/Bookmarks.plist -c "Add :Children:1:Children:0:URIDictionary:title string iMac Evernote"
+/usr/libexec/PlistBuddy /Users/steve/Library/Safari/Bookmarks.plist -c "Add :Children:1:Children:0:URLString string http://bit.ly/2vvBcpY"
+/usr/libexec/PlistBuddy /Users/steve/Library/Safari/Bookmarks.plist -c "Add :Children:1:Children:0:WebBookmarkType string WebBookmarkTypeLeaf"
+
+
 
 
 # Execute the AppleScript configuration script
