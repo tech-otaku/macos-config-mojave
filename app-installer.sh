@@ -83,11 +83,11 @@ case "$1" in
 		mv ~/Downloads/iTerm.app /Applications
 		;;
 	littlesnitch)
-		[ -f ~/Downloads/LittleSnitch-4.3.1.dmg ] && rm ~/Downloads/LittleSnitch-4.3.1.dmg
-		curl -o ~/Downloads/LittleSnitch-4.3.1.dmg -L https://www.obdev.at/downloads/littlesnitch/LittleSnitch-4.3.1.dmg
-		hdiutil attach ~/Downloads/LittleSnitch-4.3.1.dmg
-		#open /Volumes/Little\ Snitch\ 4.3.1
-		open /Volumes/Little\ Snitch\ 4.3.1/Little\ Snitch\ Installer.app
+		[ -f ~/Downloads/LittleSnitch-4.3.2.dmg ] && rm ~/Downloads/LittleSnitch-4.3.2.dmg
+		curl -o ~/Downloads/LittleSnitch-4.3.2.dmg -L https://www.obdev.at/downloads/littlesnitch/LittleSnitch-4.3.2.dmg
+		hdiutil attach ~/Downloads/LittleSnitch-4.3.2.dmg
+		#open /Volumes/Little\ Snitch\ 4.3.2
+		open /Volumes/Little\ Snitch\ 4.3.2/Little\ Snitch\ Installer.app
 		;;
 	*)
 		echo "ERROR: Application '$1' invalid."
