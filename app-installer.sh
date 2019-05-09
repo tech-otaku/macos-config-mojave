@@ -71,7 +71,7 @@ case "$1" in
 		hdiutil attach ~/Downloads/InstallBackupAndSync.dmg
 		open /Volumes/Install\ Backup\ and\ Sync\ from\ Google
 		[ -d /Applications/Backup\ and\ Sync.app ] && rm -rf /Applications/Backup\ and\ Sync.app
-		mv /Volumes/Install\ Backup\ and\ Sync\ from\ Google/Backup\ and\ Sync.app /Applications/Backup\ and\ Sync.app
+		cp -r /Volumes/Install\ Backup\ and\ Sync\ from\ Google/Backup\ and\ Sync.app /Applications/Backup\ and\ Sync.app
 		;;
 	iterm)
 		[ -f ~/Downloads/iterm.zip ] && rm ~/Downloads/iterm.zip
