@@ -65,6 +65,14 @@ case "$1" in
 		[ -d /Applications/Github\ Desktop.app ] && rm -rf /Applications/Github\ Desktop.app
 		mv ~/Downloads/GitHub\ Desktop.app /Applications
 		;;
+	googledrive)
+		[ -f ~/Downloads/InstallBackupAndSync.dmg ] && rm ~/Downloads/InstallBackupAndSync.dmg
+		curl -o ~/Downloads/InstallBackupAndSync.dmg https://dl.google.com/drive/InstallBackupAndSync.dmg
+		hdiutil attach ~/Downloads/InstallBackupAndSync.dmg
+		open /Volumes/Install\ Backup\ and\ Sync\ from\ Google
+		[ -d /Applications/Backup\ and\ Sync.app ] && rm -rf /Applications/Backup\ and\ Sync.app
+		mv /Volumes/Install\ Backup\ and\ Sync\ from\ Google/Backup\ and\ Sync.app /Applications/Backup\ and\ Sync.app
+		;;
 	iterm)
 		[ -f ~/Downloads/iterm.zip ] && rm ~/Downloads/iterm.zip
 		curl -o ~/Downloads/iterm.zip -L https://iterm2.com/downloads/stable/latest
