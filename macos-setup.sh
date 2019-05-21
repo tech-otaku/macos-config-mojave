@@ -353,6 +353,9 @@ main () {	# See https://stackoverflow.com/questions/13588457/forward-function-de
 			;;
 		missioncontrol)	# Mission Control.app
 			;;
+		navicat)		# Navicat
+			move_directory_entry "D" "$SOURCE/Library/Application Support/PremiumSoft CyberTech" "/Users/steve/Library/Application Support/PremiumSoft CyberTech"
+			;;
 		netbeans)		# NetBeans
 			move_directory_entry "D" "$SOURCE/Library/Application Support/NetBeans" "/Users/steve/Library/Application Support/NetBeans"
 			#move_directory_entry "D" "$SOURCE/Sundry/NetBeansProjects" "/Users/steve/Sundry/NetBeansProjects"
