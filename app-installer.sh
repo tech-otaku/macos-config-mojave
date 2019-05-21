@@ -89,10 +89,17 @@ case "$1" in
 		#open /Volumes/Little\ Snitch\ 4.3.2
 		open /Volumes/Little\ Snitch\ 4.3.2/Little\ Snitch\ Installer.app
 		;;
+	navicat)
+		[ -f ~/Downloads/navicat121_mysql_en.dmg ] && rm ~/Downloads/navicat121_mysql_en.dmg
+		curl -o ~/Downloads/navicat121_mysql_en.dmg -L http://download3.navicat.com/download/navicat121_mysql_en.dmg
+		yes | hdiutil attach ~/Downloads/navicat121_mysql_en.dmg > /dev/null
+		open /Volumes/Navicat\ for\ MySQL
+		#[ -d /Applications/Evernote.app ] && rm -rf /Applications/Evernote.app
+		cp -r /Volumes/Navicat\ for\ MySQL/Navicat\ for\ MySQL.app /Applications/Navicat\ for\ MySQL.app
+		hdiutil detach /Volumes/Navicat\ for\ MySQL
+		;;
 	*)
 		echo "ERROR: Application '$1' invalid."
 		exit 1
 		;;
 esac
-
-
