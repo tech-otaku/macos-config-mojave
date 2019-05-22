@@ -98,6 +98,13 @@ case "$1" in
 		cp -r /Volumes/Navicat\ for\ MySQL/Navicat\ for\ MySQL.app /Applications/Navicat\ for\ MySQL.app
 		hdiutil detach /Volumes/Navicat\ for\ MySQL
 		;;
+	querious)
+		[ -f ~/Downloads/Querious.dmg ] && rm ~/Downloads/Querious.dmg
+		curl -o ~/Downloads/Querious.dmg -L https://arweb-assets.s3.amazonaws.com/downloads/querious/Querious.dmg
+		yes | hdiutil attach ~/Downloads/Querious.dmg > /dev/null
+		cp -r /Volumes/Querious\ 2.1.13/Querious.app /Applications/Querious.app
+		hdiutil detach /Volumes/Querious\ 2.1.13
+		;;
 	*)
 		echo "ERROR: Application '$1' invalid."
 		exit 1

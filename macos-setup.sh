@@ -413,6 +413,10 @@ main () {	# See https://stackoverflow.com/questions/13588457/forward-function-de
 			;;
 		preview)		# Preview.app
 			;;
+		querious)		# Querious
+			move_directory_entry "D" "$SOURCE/Library/Application Support/Querious" "/Users/steve/Library/Application Support/Querious"
+			move_directory_entry "F" "$SOURCE/Library/Preferences/com.araeliumgroup.querious.plist" "/Users/steve/Library/Preferences/com.araeliumgroup.querious.plist"
+			;;
 		quicktime)		# QuickTime Player.app
 			;;
 		regexrx)		# RegExRX.app
