@@ -367,7 +367,7 @@ EOD
     defaults write com.apple.dock magnification -bool true
 
     # unchecked
-    #defaults write com.apple.dock magnification -bool true
+    #defaults write com.apple.dock magnification -bool false
 
 
 # System Preferences > Dock > Magnification
